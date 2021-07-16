@@ -1,0 +1,17 @@
+/*import google*/
+@import url('https://fonts.googleapis.com/css2?family=Corben&display=swap');
+
+* {
+	font-family: 'Corben', cursive;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+#aboutMe {
+	word-spacing: 100px;
+}
