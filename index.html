@@ -7,11 +7,15 @@
 	<!-- bootstrap css -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="./cs1.css">
+	<!-- aos vi michalsnik.github.io/aos -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<!-- font awesome -->
+	<script src="https://kit.fontawesome.com/180cc3fc8a.js" crossorigin="anonymous"></script>
 	<title>Portfolio | Home</title>
 </head>
 <body>
 	<!-- nav bar -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="#">
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="#">
 	  <a class="navbar-brand" href="./index.html">Neil</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLinks" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
@@ -36,28 +40,86 @@
 	</nav>
 
 	<!-- main content -->
+	<!-- home intro -->
 	<div class="container m-auto">
+		<!-- welcome jumbotron -->
+		<div class="jumbotron text-center d-flex flex-column justify-content-center mt-5" id="welcome">
+			<h1>Welcome to My Portfolio!</h1>
+		</div>
 		<div class="row d-flex flex-row align-items-center m-5">
-			<div class="col-6 d-flex flex-column align-items-center">
-				<img src="./images/pic.jpg" class="rounded mx-auto d-block" alt="Professional Photo" width="500">
+			<div class="col-md-6 d-flex flex-column align-items-center" data-aos="flip-left" data-aos-duration="2000">
+				<img src="./images/pic.jpg" class="rounded mx-auto d-block img-fluid" alt="Professional Photo" width="500">
 			</div>
-			<div class="col-6 d-flex flex-column align-items-start">
+			<div class="col-md-6 d-flex flex-column align-items-start" data-aos="fade-left" data-aos-duration="2000">
 				<h2 class="text-secondary">Hello World!</h2>
-				<h1>I'm Neil</h1>
-				<h2 class="text-secondary">Full-Stack Web Developer</h2>
+				<h1><marquee>I'm Neil</marquee></h1>
+				<h2 class="text-secondary">A Full-Stack Web Developer</h2>
+			</div>
+		</div>
+		<!-- about portfolio -->
+		<h1 class="m-5 text-center" id="pageTitle" data-aos="zoom-out" data-aos-duration="2000">About the Portfolio</h1>
+		<p class="m-5 text-justify" id="indentParagraph">
+			My portfolio aims to show its viewers different techniques and skills in web development using different tools and languages such as <em>HTML, CSS, Bootstrap, and etc.</em> It also provides a few insight of my personality and work ethics. Have a look around and explore the different pages of my portfolio. If you are interested in collaborating with me, feel free to reach me through the contact page. See you around! 
+		</p>
+	</div>
+	<!-- quote with hover effect -->
+	<div class="container mb-5" data-aos="flip-left" data-aos-duration="2000">
+		<div class="containerQuote">
+			<img src="./images/quotepic.jpg" alt="A picture of Les Miserables" class="img-fluid imageQuote" width="100%">
+			<div class="boxQuote">
+				<div class="textQuote text-wrap">
+					<em><strong>"To love another person is to see the face of God"</strong></em>
+				</div>
+				<div class="textQuote text-wrap">
+					<em><strong>- Victor Hugo</strong></em>
+				</div>
 			</div>
 		</div>
 	</div>
+	<div class="d-flex justify-content-center m-5">
+		<audio controls preload="auto">
+			<source src="./images/bgmusic.mp3" type="audio/mpeg">
+		</audio>
+	</div>
 
 	<!-- footer -->
-	<footer class="p-3 bg-primary mt-5">
-		<p class="text-center text-white">Neil Ratuiste</p>
-		<p class="text-center text-white">All Rights Reserved.</p>
-		<a href="#" class="d-block text-center text-decoration-non text-white" id="footer">Back to top</a>
+	<footer class="p-3 mt-5" id="footer">
+		<p class="text-center text-secondary">Neil Ratuiste</p>
+		<p class="text-center text-secondary">
+			<i class="far fa-copyright text-secondary"></i>
+			All Rights Reserved.
+		</p>
+		<p class="text-center text-secondary">
+			<i class="fas fa-exclamation-circle text-secondary"></i>
+			Some of the images, videos, audios that were used in this portfolio are not mine. Please contact me right away if you found your contents here to have them removed. Thank you!
+		</p>
+		<a href="#" class="d-block text-center text-decoration-non text-secondary">Back to top</a>
+
+		<!-- add motivation -->
+		<div class="d-flex justify-content-center mt-3">
+			<!-- Button trigger modal -->
+			<button type="button" class="btn text-secondary toBlink" data-toggle="modal" data-target="#motivation">
+			  Get Motivated!
+			</button>
+
+			<!-- Modal -->
+			<div class="modal fade" id="motivation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered">
+			    <div class="modal-content">
+			        <iframe class="embed-responsive-item" src="./images/motivation.mp4"></iframe>
+			    </div>
+			  </div>
+			</div>
+		</div>
 	</footer>
 
 	<!-- bootstrap js dependencies -->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+	<!-- aos script -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script>
 </body>
 </html>
